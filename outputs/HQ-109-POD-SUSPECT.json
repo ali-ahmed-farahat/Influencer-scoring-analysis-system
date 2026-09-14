@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "account_id": "HQ-109-POD-SUSPECT",
+    "username": "yasmin_derma_tips"
+  },
+  "anonymous_id": "candidate_001",
+  "derived_metrics": {
+    "gcc_audience_pct": 0.79,
+    "gcc_reachable_audience": 72680.0,
+    "calculated_engagement_rate": 0.08206521739130435,
+    "likes_to_comments_ratio": 150.0,
+    "commercial_content_rate": 0.2,
+    "content_count": 5
+  },
+  "anomaly_flags": [
+    "source_anomaly_detected",
+    "high_engagement_low_comment_quality"
+  ],
+  "hard_rule_decision": "MANUAL REVIEW",
+  "hard_rule_reasons": [
+    "source_anomaly_detected",
+    "high_engagement_low_comment_quality"
+  ],
+  "model_signals": {
+    "anonymous_id": "candidate_001",
+    "post_signals": [
+      {
+        "commercial_intent_score": 10,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "educational",
+        "evidence": [
+          "Ceramides versus hyaluronic acid: how to layer active serums for a healthy skin barrier."
+        ],
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 30,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "informative",
+        "evidence": [
+          "Three signs your cleanser is too harsh."
+        ],
+        "confidence": 0.9,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 50,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "A simple morning routine for sensitive skin.",
+        "evidence": [
+          "A simple morning routine for sensitive skin.",
+          "CeraVe"
+        ],
+        "confidence": 0.8,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 15,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "educational",
+        "evidence": [
+          "Caption discusses what to look for when choosing sunscreen in a hot climate",
+          "Post is educational focused rather than promotional"
+        ],
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 10,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "informative",
+        "evidence": [
+          "Answering your questions about repairing an irritated skin barrier."
+        ],
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      }
+    ],
+    "brand_fits": [
+      {
+        "brand": "CeraVe",
+        "brand_category": "Clinical Skincare",
+        "prestige_tier": "Mass Market",
+        "catalog_fit_score": 75.0,
+        "catalog_fit_reason": "Widely popular dermatological brand with high consumer trust, though more mass-market than luxury-oriented.",
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "La Roche-Posay",
+        "brand_category": "Clinical Skincare",
+        "prestige_tier": "Masstige",
+        "catalog_fit_score": 85.0,
+        "catalog_fit_reason": "Strong dermatologist recommendation and high consumer demand make it a great fit for clinical skincare content.",
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "The Ordinary",
+        "brand_category": "Clinical Skincare",
+        "prestige_tier": "Mass Market",
+        "catalog_fit_score": 80.0,
+        "catalog_fit_reason": "Extremely popular for targeted ingredient-led skincare, appealing to education-focused beauty creators.",
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      }
+    ]
+  },
+  "score_breakdown": {
+    "audience_commercial_viability": 24.7197,
+    "commercialization_and_intent": 3.84,
+    "category_and_brand_alignment": 22.0,
+    "content_quality_and_consistency": 15.2
+  },
+  "final_score": 65.76,
+  "decision": "MANUAL REVIEW",
+  "positive_signals": [
+    "Strong GCC audience concentration (79%)."
+  ],
+  "negative_signals": [
+    "Anomaly flag: source_anomaly_detected.",
+    "Anomaly flag: high_engagement_low_comment_quality."
+  ],
+  "next_action": "Review account visibility and anomaly evidence manually.",
+  "limitations": [
+    "Verified collaboration rate is unavailable because the mock data has no sponsorship labels.",
+    "Post-performance volatility is unavailable because post-level engagement history is missing."
+  ],
+  "final_explanation": "Candidate candidate_001 scored 65.76 and was routed to MANUAL REVIEW. The candidate shows strong GCC audience targeting (79%), but detected anomalies regarding data source integrity and low comment quality relative to engagement require human inspection.",
+  "trade_offs": [
+    "High GCC audience alignment (79% concentration) vs. potential engagement manipulation indicated by high engagement coupled with low comment quality.",
+    "Acceptable overall performance score (65.76) vs. risk from detected source anomalies.",
+    "Missing historical sponsorship and post volatility data limiting automated confidence vs. manual review overhead."
+  ],
+  "explanation_source": "gemini-3.6-flash"
+}

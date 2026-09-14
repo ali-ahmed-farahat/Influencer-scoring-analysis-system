@@ -1,0 +1,206 @@
+Okay we need to first list all the parameters existing and check what can we combine and 
+what to analyze to detect abnormal flows
+
+
+first things first, we need to set a list of GCC countries and create gcc_audience_rate
+
+then put a threshold for this 
+
+If we put the threshold super high like for example 0.9 we would be wasting people who has followers in the middle east as a whole
+for example the average arab influencer can have audience from egypt, morroco and algeria
+
+so we need to set the bar lower for example 0.6 to 0.7
+
+
+next we want to make sure that the influencer is comfortable with brands deals and colabs
+FOR THIS MOCK DATA WE HAVE 5 POSTS / influencer
+so we for example if the influncer has less than 20% of the content without colabs that means 
+he/she is not the one for us 
+
+
+then we need to validate that the brand they colabed with matches our criteria of niche of products
+men/women care , ...etc not for example cars/gaming/..etc
+
+we can also create true interaction rate becuase maybe I have alot of followers
+but the precentage that interact with me are so little that mean that I cannot create commited followers
+that can be measured by likes+comments/total_followers
+
+and going to this area of analyzing we can also put like/comments ratio
+to catch casual scrollers 
+
+and we can pay much attention to this rate in the colab POSTS since this could be the convergance_rate
+
+and to catch spikes or viral single posts we need to get to a sweet spot of std deviation
+to see the volatility of the profile expansion rate
+
+
+that is the first intuition now let's analyze the parameters one by one to get the best out of the data
+----
+
+Private accounts should usually be rejected or manually reviewed
+
+
+we can do Estimate potential GCC audience size by:
+gcc_reachable_audience = followers_count × gcc_audience_pct 
+
+
+this could be a better to go about it instead of hard scores:
+GCC audience percentage	Interpretation
+< 0.45	Usually Pass
+0.45–0.59	Review based on audience size and commercial quality
+0.60–0.79	Strong regional fit
+≥ 0.80	Excellent regional fit
+
+
+Minimum eligibility threshold: 45%
+Preferred target: 60%+
+
+
+after analyzing we can use two separate metrics:
+commercial_content_rate =
+commercial-intent posts / total posts
+
+verified_collaboration_rate =
+verified sponsored or paid-partnership posts / total posts
+
+Commercial content rate >= 40%: promising
+Commercial content rate >= 60%: strong
+Commercial content rate < 20%: limited commercial evidence
+
+
+for the likes to comments ratio
+we can use :
+| Ratio | Interpretation |
+|---:|---|
+| 4–10 | Healthy active interaction |
+| 10–40 | Mostly passive but potentially acceptable |
+| 40–100 | Weak comment activity |
+| >100 | Suspicious or commercially weak |
+
+
+we can add engagment anomlies for paid interactions as
+high_followers
++ low_engagement_rate
++ high_likes_to_comments_ratio
+
+another anamoly can be Comment-quality anomaly:
+high_engagement_rate
++ extremely low comments
++ high likes_to_comments_ratio
+
+Content anomaly:If one post performs much better than the others, the account average may be misleading.
+engagement_volatility = post_engagement_rates.std()
+
+
+for Feature Engineering we can do "Regional commercial opportunity"
+
+gcc_audience_pct
++ gcc_reachable_audience
++ engagement_rate
+
+
+now after all that we can add scoring system for weights of differnt aspects
+| Dimension                      | Weight |
+|---                               |  ---:|
+| Audience commercial viability     | 30% |
+| Commercialization and intent      | 25% |
+| Category and brand alignment      | 25% |
+| Content quality and consistency   | 20% |
+
+
+
+to avoid scoring unnecessary cadidates let's put hard rules
+Private account → (manual review)
+GCC audience below 45% → Pass
+Anomaly detected → Manual review with the symptom
+
+
+
+
+--------------
+
+FINAL STEPS FOR THE PIPELINE:
+1-Calculate GCC audience concentration and GCC reachable audience.
+2-Apply regional eligibility rules.
+3-Separate commercial content from verified collaborations.
+4-Measure engagement quality using engagement rate and likes-to-comments ratio.
+5-Detect engagement and content-performance anomalies.
+6-Evaluate category and brand fit.
+7-Apply weighted scoring only after hard filters.
+
+-------------------
+MOCK data note:
+for normal data not all brand existence mean that they were sponserships
+
+since this is mock data it cannot be calculated unless posts contain sponsorship or paid-partnership labels.
+
+---
+We can also use LLM to generate detailed reports to validate the decisions
+
+## Model responsibility split
+
+The deterministic calculations and hard business rules should remain outside the LLM. Python will calculate GCC audience percentage, GCC reachable audience, engagement rate, likes-to-comments ratio, commercial-content rate, anomaly rules, volatility, weighted score, and the final ONBOARD / HOLD / PASS decision.
+
+The LLMs will be used only for interpretation, classification, and explanation.
+
+For caption-level analysis, I can use Qwen3-14B. It will classify commercial intent, identify CTAs, discount codes, restock language, product reviews, unboxing content, and product education. I will ignore regex-based detection and require the model to return structured JSON instead.
+
+For brand and category analysis, I will use an LLM because maintaining a complete brand dictionary is outside the scope of this prototype. Gemini is suitable for this stage because brand information and catalog positioning may change over time. If current information is important, Gemini should use a grounded or trusted catalog source rather than relying only on model memory.
+
+## Model assignment
+
+Qwen3-14B:
+- Caption classification
+- Commercial-intent extraction
+- CTA detection
+- Discount-code detection
+- Restock and unboxing detection
+- Product-review classification
+- Structured evidence extraction
+
+Gemini Flash:
+- Brand classification
+- Product-category classification
+- Prestige-tier assessment
+- Boutiqaat catalog-fit analysis
+- Current brand-information verification
+
+A larger reasoning model such as Gemini Pro or Qwen3-32B:
+- Final explanation
+- Cross-signal reasoning
+- Conflict resolution
+- Diagnostic recommendation report
+
+## Why the final explanation needs a stronger model
+
+The final explanation is more complex than individual caption classification because it must reason across many parameters at the same time.
+
+It must understand trade-offs such as:
+- High GCC relevance but suspicious engagement
+- Strong luxury fit but weak commercial intent
+- Small audience but unusually strong interaction quality
+- High promotional activity but poor Boutiqaat category fit
+- Large follower count but low GCC reach
+
+Therefore, the final report should be generated by a larger reasoning model with stronger multi-parameter reasoning. The model should receive the already-calculated metrics, weighted score, hard-rule results, anomaly flags, and extracted evidence.
+
+The larger model should explain and defend the decision, but it should not calculate or override the score. The score and ONBOARD / HOLD / PASS decision must remain deterministic and reproducible in Python.
+
+## Final hybrid flow
+
+Raw profile and post data
+        ↓
+Classical preprocessing and validation
+        ↓
+Qwen3-14B caption interpretation
+        ↓
+Gemini brand and category verification
+        ↓
+Classical feature aggregation and anomaly detection
+        ↓
+Deterministic weighted score and decision
+        ↓
+Larger reasoning model generates the final explanation
+
+
+This architecture uses smaller or faster models for repetitive extraction, a model with broader current knowledge for brand verification, and a larger reasoning model for the final multi-parameter explanation.

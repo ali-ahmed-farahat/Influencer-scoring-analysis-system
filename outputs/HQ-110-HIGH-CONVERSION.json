@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "account_id": "HQ-110-HIGH-CONVERSION",
+    "username": "reem_curates_kw"
+  },
+  "anonymous_id": "candidate_001",
+  "derived_metrics": {
+    "gcc_audience_pct": 0.9199999999999999,
+    "gcc_reachable_audience": 170200.0,
+    "calculated_engagement_rate": 0.07675675675675675,
+    "likes_to_comments_ratio": 5.454545454545454,
+    "commercial_content_rate": 0.8,
+    "content_count": 5
+  },
+  "anomaly_flags": [],
+  "hard_rule_decision": null,
+  "hard_rule_reasons": [],
+  "model_signals": {
+    "anonymous_id": "candidate_001",
+    "post_signals": [
+      {
+        "commercial_intent_score": 70,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "commercial",
+        "evidence": [
+          "Fallback mock used."
+        ],
+        "confidence": 0.5,
+        "source": "fallback_mock_field",
+        "error": "GEMINI_API_KEY not set"
+      },
+      {
+        "commercial_intent_score": 70,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "commercial",
+        "evidence": [
+          "Fallback mock used."
+        ],
+        "confidence": 0.5,
+        "source": "fallback_mock_field",
+        "error": "GEMINI_API_KEY not set"
+      },
+      {
+        "commercial_intent_score": 0,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "none",
+        "evidence": [
+          "Fallback mock used."
+        ],
+        "confidence": 0.8,
+        "source": "fallback_mock_field",
+        "error": "GEMINI_API_KEY not set"
+      },
+      {
+        "commercial_intent_score": 70,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "commercial",
+        "evidence": [
+          "Fallback mock used."
+        ],
+        "confidence": 0.5,
+        "source": "fallback_mock_field",
+        "error": "GEMINI_API_KEY not set"
+      },
+      {
+        "commercial_intent_score": 70,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "commercial",
+        "evidence": [
+          "Fallback mock used."
+        ],
+        "confidence": 0.5,
+        "source": "fallback_mock_field",
+        "error": "GEMINI_API_KEY not set"
+      }
+    ],
+    "brand_fits": [
+      {
+        "brand": "Diptyque",
+        "brand_category": "unknown",
+        "prestige_tier": "unknown",
+        "catalog_fit_score": null,
+        "catalog_fit_reason": "Brand verification fallback.",
+        "confidence": 0.0,
+        "source": "fallback_unavailable",
+        "error": "GEMINI_API_KEY not set"
+      },
+      {
+        "brand": "Maison Francis Kurkdjian",
+        "brand_category": "unknown",
+        "prestige_tier": "unknown",
+        "catalog_fit_score": null,
+        "catalog_fit_reason": "Brand verification fallback.",
+        "confidence": 0.0,
+        "source": "fallback_unavailable",
+        "error": "GEMINI_API_KEY not set"
+      },
+      {
+        "brand": "Parfums de Marly",
+        "brand_category": "unknown",
+        "prestige_tier": "unknown",
+        "catalog_fit_score": null,
+        "catalog_fit_reason": "Brand verification fallback.",
+        "confidence": 0.0,
+        "source": "fallback_unavailable",
+        "error": "GEMINI_API_KEY not set"
+      }
+    ]
+  },
+  "score_breakdown": {
+    "audience_commercial_viability": 28.524216216216214,
+    "commercialization_and_intent": 12.48,
+    "category_and_brand_alignment": 10.0,
+    "content_quality_and_consistency": 6.2
+  },
+  "final_score": 57.2,
+  "decision": "MANUAL REVIEW",
+  "positive_signals": [
+    "Strong GCC audience concentration (92%).",
+    "Commercial content appears in 80% of recent posts.",
+    "Likes-to-comments ratio indicates active interaction."
+  ],
+  "negative_signals": [
+    "Brand fit was unavailable or used fallback data."
+  ],
+  "next_action": "Review account visibility and anomaly evidence manually.",
+  "limitations": [
+    "Verified collaboration rate is unavailable because the mock data has no sponsorship labels.",
+    "Post-performance volatility is unavailable because post-level engagement history is missing.",
+    "One or more model signals used labelled fallback data.",
+    "GEMINI_API_KEY not set"
+  ],
+  "final_explanation": "Decision: MANUAL REVIEW at 57.2/100.",
+  "trade_offs": [
+    "Brand fit was unavailable or used fallback data."
+  ],
+  "explanation_source": "fallback_template"
+}

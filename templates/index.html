@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boutiqaat Influencer Scoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main class="container">
+    <header>
+        <p class="eyebrow">Boutiqaat</p>
+        <h1>Influencer scoring</h1>
+        <p class="muted">Select a candidate to review regional fit, engagement quality, and commercial potential.</p>
+    </header>
+
+    {% if error %}<div class="alert error">{{ error }}</div>{% endif %}
+
+    <section class="card">
+        <h2>Candidates</h2>
+        <div class="candidate-list">
+            {% for candidate in candidates %}
+            <a class="candidate" href="{{ url_for('analyze', account_id=candidate['account_id']) }}" onclick="document.body.classList.add('loading')">
+                <span>
+                    <strong>{{ candidate['profile']['username'] }}</strong>
+                    <small>{{ candidate['profile']['category'] }} · {{ candidate['profile']['platform'] }}</small>
+                </span>
+                <span class="arrow">→</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    {% if analysis %}
+    <section class="card result">
+        <div class="result-heading">
+            <div><p class="eyebrow">Analysis result</p><h2>{{ analysis.metadata['username'] }}</h2></div>
+            <span class="decision decision-{{ analysis.decision|lower|replace(' ', '-') }}">{{ analysis.decision }}</span>
+        </div>
+
+        <div class="score-row"><span>Final score</span><strong>{{ analysis.final_score }}/100</strong></div>
+
+        <h3>Key metrics</h3>
+        <div class="metrics">
+            <div><span>GCC audience</span><strong>{{ '%.0f'|format(analysis.derived_metrics['gcc_audience_pct'] * 100) }}%</strong></div>
+            <div><span>GCC reachable audience</span><strong>{{ '{:,.0f}'.format(analysis.derived_metrics['gcc_reachable_audience']) }}</strong></div>
+            <div><span>Engagement rate</span><strong>{{ '%.2f'|format(analysis.derived_metrics['calculated_engagement_rate'] * 100) }}%</strong></div>
+            <div><span>Commercial content</span><strong>{{ '%.0f'|format(analysis.derived_metrics['commercial_content_rate'] * 100) }}%</strong></div>
+        </div>
+
+        <h3>Score breakdown</h3>
+        <div class="breakdown">
+            {% for name, value in analysis.score_breakdown.model_dump().items() %}
+            <div class="bar-row"><span>{{ name.replace('_', ' ').title() }}</span><span>{{ '%.1f'|format(value) }}</span><div class="bar"><i style="width: {{ (value / {'audience_commercial_viability': 30, 'commercialization_and_intent': 25, 'category_and_brand_alignment': 25, 'content_quality_and_consistency': 20}[name]) * 100 }}%"></i></div></div>
+            {% endfor %}
+        </div>
+
+        <h3>Explanation</h3>
+        <p>{{ analysis.final_explanation }}</p>
+
+        <div class="columns">
+            <div><h3>Positive signals</h3><ul>{% for item in analysis.positive_signals %}<li>{{ item }}</li>{% else %}<li>No strong positive signal recorded.</li>{% endfor %}</ul></div>
+            <div><h3>Risks and limitations</h3><ul>{% for item in analysis.limitations %}<li>{{ item }}</li>{% else %}<li>No additional limitations.</li>{% endfor %}</ul></div>
+        </div>
+
+        <div class="next-action"><strong>Next action:</strong> {{ analysis.next_action }}</div>
+    </section>
+    {% endif %}
+</main>
+<div class="loading-screen" aria-live="polite"><div class="spinner"></div><strong>Analyzing candidate…</strong><span>Running preprocessing and model checks</span></div>
+<script>window.addEventListener('pageshow', () => document.body.classList.remove('loading'));</script>
+</body>
+</html>

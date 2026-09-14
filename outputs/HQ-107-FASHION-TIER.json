@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "account_id": "HQ-107-FASHION-TIER",
+    "username": "khalid_luxury_man"
+  },
+  "anonymous_id": "candidate_001",
+  "derived_metrics": {
+    "gcc_audience_pct": 0.85,
+    "gcc_reachable_audience": 263500.0,
+    "calculated_engagement_rate": 0.021419354838709676,
+    "likes_to_comments_ratio": 46.42857142857143,
+    "commercial_content_rate": 0.4,
+    "content_count": 5
+  },
+  "anomaly_flags": [],
+  "hard_rule_decision": null,
+  "hard_rule_reasons": [],
+  "model_signals": {
+    "anonymous_id": "candidate_001",
+    "post_signals": [
+      {
+        "commercial_intent_score": 10,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "lifestyle aesthetic post mentioning a fragrance",
+        "evidence": [
+          "Classic tailoring paired with Creed Aventus. Details matter."
+        ],
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 75,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": true,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "routine demonstration",
+        "evidence": [
+          "Three grooming products I use before an evening event.",
+          "Tom Ford Beauty"
+        ],
+        "confidence": 0.9,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 15,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "informational",
+        "evidence": [
+          "How I choose a watch for formal tailoring."
+        ],
+        "confidence": 0.9,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 30,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "informational",
+        "evidence": [
+          "A close look at the details in this travel watch roll."
+        ],
+        "confidence": 0.9,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 40,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "lifestyle showcase",
+        "evidence": [
+          "Weekend fragrance rotation: fresh, woody, and warm.",
+          "Creed Fragrances tagged"
+        ],
+        "confidence": 0.85,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      }
+    ],
+    "brand_fits": [
+      {
+        "brand": "Bottega Veneta",
+        "brand_category": "Luxury Fashion & Accessories",
+        "prestige_tier": "Ultra-Luxury",
+        "catalog_fit_score": 85.0,
+        "catalog_fit_reason": "High-end luxury accessories complement a premium men's grooming and lifestyle catalog, appealing to affluent clientele.",
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "Creed Fragrances",
+        "brand_category": "Niche Perfumery",
+        "prestige_tier": "Luxury",
+        "catalog_fit_score": 98.0,
+        "catalog_fit_reason": "Directly aligns with the Men's Grooming & Luxury Watches category as a premier fragrance choice for high-end consumers.",
+        "confidence": 0.99,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "Rolex",
+        "brand_category": "Luxury Timepieces",
+        "prestige_tier": "Ultra-Luxury",
+        "catalog_fit_score": 100.0,
+        "catalog_fit_reason": "Directly matches the Luxury Watches portion of the category, serving as a top-tier status symbol for creators.",
+        "confidence": 0.99,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "Tom Ford Beauty",
+        "brand_category": "Luxury Cosmetics & Fragrance",
+        "prestige_tier": "Luxury",
+        "catalog_fit_score": 95.0,
+        "catalog_fit_reason": "Fits the Men's Grooming sector exceptionally well with high-end fragrances and grooming lines suited for a luxury lifestyle catalog.",
+        "confidence": 0.98,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      }
+    ]
+  },
+  "score_breakdown": {
+    "audience_commercial_viability": 24.874193548387098,
+    "commercialization_and_intent": 6.720000000000001,
+    "category_and_brand_alignment": 24.174999999999997,
+    "content_quality_and_consistency": 5.800000000000001
+  },
+  "final_score": 61.57,
+  "decision": "HOLD",
+  "positive_signals": [
+    "Strong GCC audience concentration (85%).",
+    "Commercial content appears in 40% of recent posts."
+  ],
+  "negative_signals": [],
+  "next_action": "Run a controlled pilot campaign before onboarding.",
+  "limitations": [
+    "Verified collaboration rate is unavailable because the mock data has no sponsorship labels.",
+    "Post-performance volatility is unavailable because post-level engagement history is missing."
+  ],
+  "final_explanation": "Candidate candidate_001 received a HOLD decision with a final score of 61.57. While the candidate exhibits strong GCC audience relevance (85%) and active commercial content (40%), limited historical collaboration and post-level performance data introduce uncertainty.",
+  "trade_offs": [
+    "High GCC audience concentration (85%) vs. lack of verified collaboration rate history.",
+    "Good commercial activity level (40%) vs. missing post-level engagement volatility data."
+  ],
+  "explanation_source": "gemini-3.6-flash"
+}

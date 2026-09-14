@@ -1,0 +1,132 @@
+[
+  {
+    "account_id": "HQ-101-KW",
+    "profile": {"username": "sara_beauty_kuwait", "platform": "instagram", "followers_count": 150000, "category": "Beauty & Makeup", "is_private": false},
+    "audience_insights": {"geo_distribution": {"Kuwait": 0.55, "Saudi Arabia": 0.20, "United Arab Emirates": 0.10, "Other": 0.15}},
+    "performance_metrics": {"engagement_rate": 0.0500, "avg_likes": 6000, "avg_comments": 1500, "likes_to_comments_ratio": 4.00, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-101-01", "format": "reel", "video_length_seconds": 45, "caption": "Get ready with me using my favorite foundation. Use SARA20 for 20% off! #hudabeauty", "brands_tagged": ["Huda Beauty", "Charlotte Tilbury"], "has_commercial_intent": true},
+      {"post_id": "HQ-101-02", "format": "reel", "video_length_seconds": 31, "caption": "Three concealer combinations for a bright under-eye. Which one should I test next?", "brands_tagged": ["NARS", "Huda Beauty"], "has_commercial_intent": true},
+      {"post_id": "HQ-101-03", "format": "carousel", "video_length_seconds": null, "caption": "My everyday base routine, step by step. Save this for your next makeup day.", "brands_tagged": ["Charlotte Tilbury"], "has_commercial_intent": false},
+      {"post_id": "HQ-101-04", "format": "reel", "video_length_seconds": 52, "caption": "Testing a long-wear foundation in Kuwait heat. Full shade notes in the caption.", "brands_tagged": ["Estée Lauder"], "has_commercial_intent": true},
+      {"post_id": "HQ-101-05", "format": "story", "video_length_seconds": 18, "caption": "Restock alert: my favorite lip combo is available again. Tap for details.", "brands_tagged": ["Dior Beauty"], "has_commercial_intent": true}
+    ]
+  },
+  {
+    "account_id": "HQ-102-GL",
+    "profile": {"username": "global_gamer_x", "platform": "tiktok", "followers_count": 2500000, "category": "Gaming & Comedy", "is_private": false},
+    "audience_insights": {"geo_distribution": {"United States": 0.45, "United Kingdom": 0.20, "Saudi Arabia": 0.05, "Other": 0.30}},
+    "performance_metrics": {"engagement_rate": 0.0700, "avg_likes": 170000, "avg_comments": 5000, "likes_to_comments_ratio": 34.00, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-102-01", "format": "video", "video_length_seconds": 15, "caption": "When the ping is too high 😂🎮 #gaming #funny", "brands_tagged": ["Razer"], "has_commercial_intent": false},
+      {"post_id": "HQ-102-02", "format": "video", "video_length_seconds": 22, "caption": "The controller test that went completely wrong.", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-102-03", "format": "video", "video_length_seconds": 19, "caption": "Ranked match highlights from last night.", "brands_tagged": ["Logitech G"], "has_commercial_intent": false},
+      {"post_id": "HQ-102-04", "format": "video", "video_length_seconds": 28, "caption": "New headset setup and first impressions. What should I test next?", "brands_tagged": ["SteelSeries"], "has_commercial_intent": true},
+      {"post_id": "HQ-102-05", "format": "video", "video_length_seconds": 14, "caption": "Every gamer knows this pain 😅", "brands_tagged": [], "has_commercial_intent": false}
+    ]
+  },
+  {
+    "account_id": "HQ-103-BOT",
+    "profile": {"username": "luxury_dubai_lifestyle", "platform": "instagram", "followers_count": 850000, "category": "Lifestyle & Fashion", "is_private": false},
+    "audience_insights": {"geo_distribution": {"United Arab Emirates": 0.40, "India": 0.35, "Saudi Arabia": 0.15, "Other": 0.10}},
+    "performance_metrics": {"engagement_rate": 0.0030, "avg_likes": 2500, "avg_comments": 50, "likes_to_comments_ratio": 50.00, "anomaly_detected": true},
+    "recent_content_signals": [
+      {"post_id": "HQ-103-01", "format": "carousel", "video_length_seconds": null, "caption": "Yacht day 🛥️✨", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-103-02", "format": "photo", "video_length_seconds": null, "caption": "Dubai evenings and city lights.", "brands_tagged": ["Dior"], "has_commercial_intent": false},
+      {"post_id": "HQ-103-03", "format": "carousel", "video_length_seconds": null, "caption": "A quiet weekend escape.", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-103-04", "format": "reel", "video_length_seconds": 20, "caption": "A look inside my travel wardrobe.", "brands_tagged": ["Bvlgari"], "has_commercial_intent": false},
+      {"post_id": "HQ-103-05", "format": "photo", "video_length_seconds": null, "caption": "Golden hour in Dubai.", "brands_tagged": [], "has_commercial_intent": false}
+    ]
+  },
+  {
+    "account_id": "HQ-104-NICHE",
+    "profile": {"username": "oud_fragrance_diary", "platform": "tiktok", "followers_count": 12500, "category": "Niche Perfume", "is_private": false},
+    "audience_insights": {"geo_distribution": {"Saudi Arabia": 0.60, "United Arab Emirates": 0.20, "Oman": 0.10, "Other": 0.10}},
+    "performance_metrics": {"engagement_rate": 0.1200, "avg_likes": 1200, "avg_comments": 300, "likes_to_comments_ratio": 4.00, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-104-01", "format": "video", "video_length_seconds": 180, "caption": "Deep dive into Tom Ford Oud Wood. Is the longevity worth it for summer? Let's discuss the notes.", "brands_tagged": ["Tom Ford Beauty"], "has_commercial_intent": true},
+      {"post_id": "HQ-104-02", "format": "video", "video_length_seconds": 145, "caption": "Three affordable oud fragrances that surprised me.", "brands_tagged": ["Lattafa", "Afnan"], "has_commercial_intent": true},
+      {"post_id": "HQ-104-03", "format": "video", "video_length_seconds": 210, "caption": "How to layer oud without making it overpowering.", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-104-04", "format": "video", "video_length_seconds": 165, "caption": "Comparing the dry-down of two popular Middle Eastern scents.", "brands_tagged": ["Amouage"], "has_commercial_intent": true},
+      {"post_id": "HQ-104-05", "format": "video", "video_length_seconds": 120, "caption": "Your questions about summer perfume answered.", "brands_tagged": ["Tom Ford Beauty"], "has_commercial_intent": false}
+    ]
+  },
+  {
+    "account_id": "HQ-105-AESTHETIC",
+    "profile": {"username": "minimalist_riyadh", "platform": "instagram", "followers_count": 75000, "category": "Aesthetic Lifestyle", "is_private": false},
+    "audience_insights": {"geo_distribution": {"Saudi Arabia": 0.70, "Kuwait": 0.10, "Other": 0.20}},
+    "performance_metrics": {"engagement_rate": 0.0350, "avg_likes": 2500, "avg_comments": 125, "likes_to_comments_ratio": 20.00, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-105-01", "format": "reel", "video_length_seconds": 12, "caption": "Morning coffee and quiet moments ☕🌿", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-105-02", "format": "reel", "video_length_seconds": 18, "caption": "Neutral wardrobe staples I wear every week.", "brands_tagged": ["COS"], "has_commercial_intent": true},
+      {"post_id": "HQ-105-03", "format": "carousel", "video_length_seconds": null, "caption": "A simple desk reset for a calmer workday.", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-105-04", "format": "reel", "video_length_seconds": 15, "caption": "Three ways I style a linen shirt.", "brands_tagged": ["Massimo Dutti"], "has_commercial_intent": true},
+      {"post_id": "HQ-105-05", "format": "photo", "video_length_seconds": null, "caption": "Soft light and a slow Friday morning.", "brands_tagged": [], "has_commercial_intent": false}
+    ]
+  },
+  {
+    "account_id": "HQ-106-PR-SEEKER",
+    "profile": {"username": "nour_glam_doha", "platform": "instagram", "followers_count": 48000, "category": "Beauty & Skincare", "is_private": false},
+    "audience_insights": {"geo_distribution": {"Qatar": 0.48, "Kuwait": 0.22, "Saudi Arabia": 0.18, "Other": 0.12}},
+    "performance_metrics": {"engagement_rate": 0.0538, "avg_likes": 2300, "avg_comments": 280, "likes_to_comments_ratio": 8.21, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-106-01", "format": "reel", "video_length_seconds": 38, "caption": "Testing the viral lip oil from Dior Beauty. Shimmer is subtle and hydration lasts for hours.", "brands_tagged": ["Dior Beauty"], "has_commercial_intent": true},
+      {"post_id": "HQ-106-02", "format": "reel", "video_length_seconds": 44, "caption": "A five-minute routine for hydrated skin before makeup.", "brands_tagged": ["La Roche-Posay"], "has_commercial_intent": true},
+      {"post_id": "HQ-106-03", "format": "carousel", "video_length_seconds": null, "caption": "Which shade should I review next? Vote in the comments.", "brands_tagged": ["Dior Beauty"], "has_commercial_intent": true},
+      {"post_id": "HQ-106-04", "format": "reel", "video_length_seconds": 29, "caption": "What actually stays on through a long Doha day.", "brands_tagged": ["Fenty Beauty"], "has_commercial_intent": true},
+      {"post_id": "HQ-106-05", "format": "story", "video_length_seconds": 16, "caption": "My current skincare shelf and the products I would repurchase.", "brands_tagged": ["CeraVe"], "has_commercial_intent": false}
+    ]
+  },
+  {
+    "account_id": "HQ-107-FASHION-TIER",
+    "profile": {"username": "khalid_luxury_man", "platform": "instagram", "followers_count": 310000, "category": "Men's Grooming & Luxury Watches", "is_private": false},
+    "audience_insights": {"geo_distribution": {"Saudi Arabia": 0.52, "United Arab Emirates": 0.25, "Bahrain": 0.08, "Other": 0.15}},
+    "performance_metrics": {"engagement_rate": 0.0214, "avg_likes": 6500, "avg_comments": 140, "likes_to_comments_ratio": 46.43, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-107-01", "format": "carousel", "video_length_seconds": null, "caption": "Classic tailoring paired with Creed Aventus. Details matter.", "brands_tagged": ["Creed Fragrances"], "has_commercial_intent": false},
+      {"post_id": "HQ-107-02", "format": "reel", "video_length_seconds": 34, "caption": "Three grooming products I use before an evening event.", "brands_tagged": ["Tom Ford Beauty"], "has_commercial_intent": true},
+      {"post_id": "HQ-107-03", "format": "carousel", "video_length_seconds": null, "caption": "How I choose a watch for formal tailoring.", "brands_tagged": ["Rolex"], "has_commercial_intent": false},
+      {"post_id": "HQ-107-04", "format": "reel", "video_length_seconds": 27, "caption": "A close look at the details in this travel watch roll.", "brands_tagged": ["Bottega Veneta"], "has_commercial_intent": false},
+      {"post_id": "HQ-107-05", "format": "photo", "video_length_seconds": null, "caption": "Weekend fragrance rotation: fresh, woody, and warm.", "brands_tagged": ["Creed Fragrances"], "has_commercial_intent": true}
+    ]
+  },
+  {
+    "account_id": "HQ-108-VIRAL-FATIGUE",
+    "profile": {"username": "trend_queen_dxb", "platform": "tiktok", "followers_count": 620000, "category": "Fast Beauty & Dupe Reviews", "is_private": false},
+    "audience_insights": {"geo_distribution": {"United Arab Emirates": 0.35, "Egypt": 0.28, "Saudi Arabia": 0.15, "Other": 0.22}},
+    "performance_metrics": {"engagement_rate": 0.0180, "avg_likes": 11000, "avg_comments": 160, "likes_to_comments_ratio": 68.75, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-108-01", "format": "video", "video_length_seconds": 160, "caption": "Drugstore dupes you need instead of spending 300 AED. Link in bio for coupon codes!", "brands_tagged": ["SHEGLAM", "NYX Cosmetics"], "has_commercial_intent": true},
+      {"post_id": "HQ-108-02", "format": "video", "video_length_seconds": 95, "caption": "Five viral blushes tested side by side.", "brands_tagged": ["e.l.f. Cosmetics", "Rare Beauty"], "has_commercial_intent": true},
+      {"post_id": "HQ-108-03", "format": "video", "video_length_seconds": 72, "caption": "The beauty trend I would skip this month.", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-108-04", "format": "video", "video_length_seconds": 110, "caption": "Budget makeup basket under 100 AED.", "brands_tagged": ["NYX Cosmetics"], "has_commercial_intent": true},
+      {"post_id": "HQ-108-05", "format": "video", "video_length_seconds": 80, "caption": "Trying the internet's most controversial lip liner.", "brands_tagged": ["SHEGLAM"], "has_commercial_intent": true}
+    ]
+  },
+  {
+    "account_id": "HQ-109-POD-SUSPECT",
+    "profile": {"username": "yasmin_derma_tips", "platform": "instagram", "followers_count": 92000, "category": "Clinical Skincare", "is_private": false},
+    "audience_insights": {"geo_distribution": {"Kuwait": 0.42, "Saudi Arabia": 0.31, "Bahrain": 0.06, "Other": 0.21}},
+    "performance_metrics": {"engagement_rate": 0.0820, "avg_likes": 7500, "avg_comments": 50, "likes_to_comments_ratio": 150.00, "anomaly_detected": true},
+    "recent_content_signals": [
+      {"post_id": "HQ-109-01", "format": "reel", "video_length_seconds": 50, "caption": "Ceramides versus hyaluronic acid: how to layer active serums for a healthy skin barrier.", "brands_tagged": ["The Ordinary", "CeraVe"], "has_commercial_intent": false},
+      {"post_id": "HQ-109-02", "format": "reel", "video_length_seconds": 42, "caption": "Three signs your cleanser is too harsh.", "brands_tagged": [], "has_commercial_intent": false},
+      {"post_id": "HQ-109-03", "format": "carousel", "video_length_seconds": null, "caption": "A simple morning routine for sensitive skin.", "brands_tagged": ["CeraVe"], "has_commercial_intent": true},
+      {"post_id": "HQ-109-04", "format": "reel", "video_length_seconds": 58, "caption": "What to look for when choosing sunscreen in a hot climate.", "brands_tagged": ["La Roche-Posay"], "has_commercial_intent": false},
+      {"post_id": "HQ-109-05", "format": "reel", "video_length_seconds": 46, "caption": "Answering your questions about repairing an irritated skin barrier.", "brands_tagged": [], "has_commercial_intent": false}
+    ]
+  },
+  {
+    "account_id": "HQ-110-HIGH-CONVERSION",
+    "profile": {"username": "reem_curates_kw", "platform": "instagram", "followers_count": 185000, "category": "Niche Perfume & Luxury Beauty", "is_private": false},
+    "audience_insights": {"geo_distribution": {"Kuwait": 0.60, "Saudi Arabia": 0.24, "United Arab Emirates": 0.08, "Other": 0.08}},
+    "performance_metrics": {"engagement_rate": 0.0768, "avg_likes": 12000, "avg_comments": 2200, "likes_to_comments_ratio": 5.45, "anomaly_detected": false},
+    "recent_content_signals": [
+      {"post_id": "HQ-110-01", "format": "reel", "video_length_seconds": 42, "caption": "My signature evening scent combination is finally restocked! Use code REEMBOUTIQUE for express delivery and 15% off at checkout.", "brands_tagged": ["Parfums de Marly", "Maison Francis Kurkdjian"], "has_commercial_intent": true},
+      {"post_id": "HQ-110-02", "format": "reel", "video_length_seconds": 36, "caption": "Three luxury fragrances that work beautifully in Kuwait evenings.", "brands_tagged": ["Parfums de Marly"], "has_commercial_intent": true},
+      {"post_id": "HQ-110-03", "format": "carousel", "video_length_seconds": null, "caption": "How to choose a signature scent from the fragrance families.", "brands_tagged": ["Maison Francis Kurkdjian"], "has_commercial_intent": false},
+      {"post_id": "HQ-110-04", "format": "reel", "video_length_seconds": 48, "caption": "Unboxing my latest perfume discovery. Details and notes below.", "brands_tagged": ["Diptyque"], "has_commercial_intent": true},
+      {"post_id": "HQ-110-05", "format": "story", "video_length_seconds": 20, "caption": "Restock poll: which scent should return to my edit next?", "brands_tagged": ["Parfums de Marly"], "has_commercial_intent": true}
+    ]
+  }
+]

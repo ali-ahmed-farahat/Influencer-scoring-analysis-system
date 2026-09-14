@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "account_id": "HQ-101-KW",
+    "username": "sara_beauty_kuwait"
+  },
+  "anonymous_id": "candidate_001",
+  "derived_metrics": {
+    "gcc_audience_pct": 0.8500000000000001,
+    "gcc_reachable_audience": 127500.00000000001,
+    "calculated_engagement_rate": 0.05,
+    "likes_to_comments_ratio": 4.0,
+    "commercial_content_rate": 0.8,
+    "content_count": 5
+  },
+  "anomaly_flags": [],
+  "hard_rule_decision": null,
+  "hard_rule_reasons": [],
+  "model_signals": {
+    "anonymous_id": "candidate_001",
+    "post_signals": [
+      {
+        "commercial_intent_score": 90,
+        "has_call_to_action": true,
+        "has_discount_code": true,
+        "has_restock_signal": false,
+        "has_product_review": true,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "promotional",
+        "evidence": [
+          "Use SARA20 for 20% off!",
+          "favorite foundation"
+        ],
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 60,
+        "has_call_to_action": true,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "educational",
+        "evidence": [
+          "Three concealer combinations for a bright under-eye.",
+          "Which one should I test next?"
+        ],
+        "confidence": 0.85,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 40,
+        "has_call_to_action": true,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "routine tutorial",
+        "evidence": [
+          "My everyday base routine, step by step",
+          "Save this for your next makeup day"
+        ],
+        "confidence": 0.85,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 75,
+        "has_call_to_action": false,
+        "has_discount_code": false,
+        "has_restock_signal": false,
+        "has_product_review": true,
+        "has_unboxing": false,
+        "has_product_education": true,
+        "sales_framing": "product review",
+        "evidence": [
+          "Testing a long-wear foundation in Kuwait heat",
+          "Full shade notes in the caption"
+        ],
+        "confidence": 0.9,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "commercial_intent_score": 90,
+        "has_call_to_action": true,
+        "has_discount_code": false,
+        "has_restock_signal": true,
+        "has_product_review": false,
+        "has_unboxing": false,
+        "has_product_education": false,
+        "sales_framing": "restock",
+        "evidence": [
+          "Restock alert: my favorite lip combo is available again",
+          "Tap for details"
+        ],
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      }
+    ],
+    "brand_fits": [
+      {
+        "brand": "Charlotte Tilbury",
+        "brand_category": "Beauty & Makeup",
+        "prestige_tier": "Luxury",
+        "catalog_fit_score": 95.0,
+        "catalog_fit_reason": "Extremely high demand and relevance for beauty creators in the Middle East region on platforms like Boutiqaat.",
+        "confidence": 0.98,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "Dior Beauty",
+        "brand_category": "Beauty & Makeup",
+        "prestige_tier": "Luxury",
+        "catalog_fit_score": 90.0,
+        "catalog_fit_reason": "High-end luxury beauty brand that strongly appeals to affluent audiences and top-tier creators.",
+        "confidence": 0.97,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "Estée Lauder",
+        "brand_category": "Beauty & Makeup",
+        "prestige_tier": "Prestigious",
+        "catalog_fit_score": 85.0,
+        "catalog_fit_reason": "Established prestige beauty brand with broad appeal across diverse demographic segments.",
+        "confidence": 0.95,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "Huda Beauty",
+        "brand_category": "Beauty & Makeup",
+        "prestige_tier": "Prestigious",
+        "catalog_fit_score": 100.0,
+        "catalog_fit_reason": "Regional and global powerhouse brand founded by a prominent Middle Eastern beauty mogul, perfect fit for Boutiqaat.",
+        "confidence": 0.99,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      },
+      {
+        "brand": "NARS",
+        "brand_category": "Beauty & Makeup",
+        "prestige_tier": "Prestigious",
+        "catalog_fit_score": 88.0,
+        "catalog_fit_reason": "Popular professional-grade prestige makeup brand frequently featured in creator tutorials and recommendations.",
+        "confidence": 0.96,
+        "source": "gemini-3.5-flash-lite",
+        "error": null
+      }
+    ]
+  },
+  "score_breakdown": {
+    "audience_commercial_viability": 24.475,
+    "commercialization_and_intent": 19.28,
+    "category_and_brand_alignment": 23.74,
+    "content_quality_and_consistency": 12.600000000000001
+  },
+  "final_score": 80.09,
+  "decision": "ONBOARD",
+  "positive_signals": [
+    "Strong GCC audience concentration (85%).",
+    "Commercial content appears in 80% of recent posts.",
+    "Likes-to-comments ratio indicates active interaction."
+  ],
+  "negative_signals": [],
+  "next_action": "Proceed to onboarding discussion.",
+  "limitations": [
+    "Verified collaboration rate is unavailable because the mock data has no sponsorship labels.",
+    "Post-performance volatility is unavailable because post-level engagement history is missing."
+  ],
+  "final_explanation": "Candidate candidate_001 achieved a final score of 80.09 and is recommended to ONBOARD due to strong GCC audience concentration (85%) and high commercial alignment.",
+  "trade_offs": [
+    "High commercial content frequency (80%) shows strong sales readiness but creates potential audience fatigue risk.",
+    "Decision relies on a small sample of 5 recent posts without verified sponsorship labels or historical post volatility data."
+  ],
+  "explanation_source": "gemini-3.6-flash"
+}
