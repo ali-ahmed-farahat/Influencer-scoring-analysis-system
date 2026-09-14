@@ -12,6 +12,13 @@ from logging_utils import configure_logging
 
 logger = configure_logging()
 
+BOUTIQAAT_CONTEXT = """
+Boutiqaat is a GCC-focused e-commerce platform. Prioritize GCC audience relevance,
+beauty/fashion/lifestyle product alignment, commercial intent, product demonstration,
+trustworthy engagement, and suitability for measurable campaigns. A brand tag is not
+proof of sponsorship.
+"""
+
 
 @dataclass(frozen=True)
 class DerivedMetrics:
@@ -165,6 +172,7 @@ def run_gemini(
 
 def extract_post_signals(post: dict[str, Any]) -> PostSignals:
     prompt = (
+        f"{BOUTIQAAT_CONTEXT}\n"
         "Analyze this creator post for e-commerce suitability. Do not infer sponsorship merely from a brand tag.\n"
         f"Post:\n{json.dumps(post, ensure_ascii=False)}"
     )
@@ -202,6 +210,7 @@ def classify_brands(brands: list[str], creator_category: str) -> list[BrandFit]:
     if not brands:
         return []
     prompt = (
+        f"{BOUTIQAAT_CONTEXT}\n"
         f"Classify these brands for a Boutiqaat creator in category: {creator_category}. "
         "Assess category, prestige tier, and fit. A tag is not proof of a paid deal.\n"
         f"Brands: {json.dumps(brands, ensure_ascii=False)}"
@@ -261,6 +270,7 @@ def generate_final_explanation(analysis: CandidateAnalysis) -> FinalExplanation:
         }
     )
     prompt = (
+        f"{BOUTIQAAT_CONTEXT}\n"
         "Explain this deterministic Boutiqaat candidate decision for a non-technical manager. "
         "Do not change the score or decision. Mention trade-offs and limitations. "
         "Return a concise summary, a trade_offs list, and recommended_next_action.\n"

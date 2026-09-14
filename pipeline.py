@@ -134,34 +134,43 @@ def score_candidate(
     result: PreprocessedCandidate,
     model_signals: dict[str, Any],
 ) -> CandidateAnalysis:
-    """Aggregate deterministic and model signals into one explainable decision."""
+    """Run the complete scoring pipeline and return an explainable decision."""
+    # Read deterministic metrics and model-derived post and brand signals.
     metrics = result.metrics
     posts = model_signals.get("post_signals", [])
     brands = model_signals.get("brand_fits", [])
+    # Measure average commercial intent across the analyzed posts.
     avg_intent = sum(p.get("commercial_intent_score", 0) for p in posts) / len(posts) if posts else 0
+    # Count posts containing direct commercial proof such as CTAs or restocks.
     proof_rate = sum(
         any(p.get(key) for key in ("has_call_to_action", "has_discount_code", "has_restock_signal"))
         for p in posts
     ) / len(posts) if posts else 0
+    # Count posts that explain or demonstrate a product.
     product_evidence_rate = sum(
         any(p.get(key) for key in ("has_product_review", "has_unboxing", "has_product_education"))
         for p in posts
     ) / len(posts) if posts else 0
+    # Measure how many videos fall inside the chosen 30-60 second range.
     duration_fit_rate = sum(
         30 <= (post.get("video_length_seconds") or 0) <= 60
         for post in result.scoring_payload["recent_content_signals"]
     ) / metrics.content_count
+    # Measure how many posts use video or story formats.
     video_format_rate = sum(
         post.get("format") in {"reel", "video", "story"}
         for post in result.scoring_payload["recent_content_signals"]
     ) / metrics.content_count
+    # Give relevant creator categories a deterministic category-fit contribution.
     category = result.scoring_payload["profile"]["category"].lower()
     category_relevance = 10 if any(
         word in category for word in ("beauty", "makeup", "skincare", "fragrance", "grooming", "luxury")
     ) else 0
+    # Convert available Gemini brand-fit scores into category points.
     known_brand_scores = [b["catalog_fit_score"] for b in brands if b.get("catalog_fit_score") is not None]
     brand_fit = (sum(known_brand_scores) / len(known_brand_scores) / 100 * 15) if known_brand_scores else 0
 
+    # Build the four weighted score components.
     breakdown = ScoreBreakdown(
         audience_commercial_viability=min(metrics.gcc_audience_pct / 0.8, 1) * 15
         + min(metrics.gcc_reachable_audience / 200_000, 1) * 8
@@ -174,16 +183,20 @@ def score_candidate(
         + duration_fit_rate * 5
         + video_format_rate * 4,
     )
+    # Add the components into the final score.
     final_score = round(sum(breakdown.model_dump().values()), 2)
+    # Detect missing model evidence before assigning an automated decision.
     model_unavailable = any(
         signal.get("source", "").startswith("fallback")
         for signal in [*posts, *brands]
     )
+    # Apply hard rules first; otherwise use the numeric score thresholds.
     decision = result.hard_rule_decision or (
         "MANUAL REVIEW"
         if model_unavailable
         else "ONBOARD" if final_score >= 75 else "HOLD" if final_score >= 60 else "PASS"
     )
+    # Collect the strongest positive and negative explanations.
     positive = []
     negative = []
     if metrics.gcc_audience_pct >= 0.6:
@@ -198,18 +211,21 @@ def score_candidate(
         negative.append("Limited evidence of commercial content.")
     if not known_brand_scores:
         negative.append("Brand fit was unavailable or used fallback data.")
+    # Convert the decision into a concrete Celebrity Management action.
     next_action = {
         "ONBOARD": "Proceed to onboarding discussion.",
         "HOLD": "Run a controlled pilot campaign before onboarding.",
         "PASS": "Do not allocate onboarding capacity.",
         "MANUAL REVIEW": "Review account visibility and anomaly evidence manually.",
     }[decision]
+    # Record limitations that apply to the mock dataset or model run.
     limitations = [
         "Verified collaboration rate is unavailable because the mock data has no sponsorship labels.",
         "Post-performance volatility is unavailable because post-level engagement history is missing.",
     ]
     if model_unavailable:
         limitations.append("One or more model signals used labelled fallback data.")
+    # Build the structured analysis before asking Gemini to explain it.
     analysis = CandidateAnalysis(
         metadata={"account_id": result.account_id, "username": result.username},
         anonymous_id=result.anonymous_id,
@@ -226,6 +242,7 @@ def score_candidate(
         next_action=next_action,
         limitations=limitations,
     )
+    # Generate a manager-readable explanation without changing the decision.
     explanation = generate_final_explanation(analysis)
     analysis.final_explanation = explanation.summary
     analysis.trade_offs = explanation.trade_offs
